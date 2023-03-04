@@ -33,8 +33,8 @@ function VideoPanel() {
                     ></iframe>
                 </div>
                 <div className='mt-5'>
-                    <h1 className='text-xl font-medium text-[#f1f1f1] sm:text-base'>{video.title}</h1>
-                    <p className='text-[#c2c1c1] font-light text-sm'><span className='font-medium'>Published :</span> {moment(video.publishTime).startOf('hour').fromNow()}</p>
+                    <h1 className='text-xl font-medium text-[#f1f1f1] leading-none sm:text-base line-clamp-2'>{video.title}</h1>
+                    <p className='text-[#c2c1c1] font-light text-sm mt-3'><span className='font-medium'>Published :</span> {moment(video.publishTime).startOf('hour').fromNow()}</p>
                 </div>
             </div>
             <div className='w-[330px] lg:w-full lg:mt-10 h-[500px] md:h-[400px]  flex flex-col z-20 overflow-hidden rounded-xl border-[0.5px] border-[#5c5c5c2a] bg-[#1c1c1c]'>
@@ -46,7 +46,9 @@ function VideoPanel() {
                         data.map((val: IYtData, index: number) => {
                             return (
                                 <div key={index} title={val.title} className={`flex cursor-pointer gap-2 py-1 px-3 ${val.videoId === video.videoId ? 'bg-[#313131]' : 'hover:bg-[#3131316d] '}`} onClick={() => setVideo(val)}>
-                                    <Image src={val.thumbnails.url} className='rounded-md' width={100} height={100} alt='img' />
+                                    <div className='w-[100px] h-[70px] overflow-hidden flex-shrink-0 p-5 relative'>
+                                        <Image src={val.thumbnails.url} className='rounded-md' fill alt='img' />
+                                    </div>
                                     <div className='flex flex-col justify-center pr-2'>
                                         <p className='text-sm line-clamp-2 text-[#f1f1f1] font-medium'>{val.title}</p>
                                         <div>

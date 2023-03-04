@@ -1,5 +1,5 @@
 import { Footer, Header } from '@/components'
-import { Roboto, Lato } from '@next/font/google'
+import { Lato } from '@next/font/google'
 import './globals.css'
 
 const lato = Lato(
