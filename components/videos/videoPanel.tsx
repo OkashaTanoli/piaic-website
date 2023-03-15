@@ -32,7 +32,7 @@ function VideoPanel() {
                         allowFullScreen
                     ></iframe>
                 </div>
-                <div className='mt-5'>
+                <div className='mt-3'>
                     <h1 className='text-xl font-medium text-[#f1f1f1] leading-none sm:text-base line-clamp-2'>{video.title}</h1>
                     <p className='text-[#c2c1c1] font-light text-sm mt-3'><span className='font-medium'>Published :</span> {moment(video.publishTime).startOf('hour').fromNow()}</p>
                 </div>

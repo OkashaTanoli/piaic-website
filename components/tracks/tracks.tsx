@@ -1,4 +1,4 @@
-import {Bebas_Neue } from '@next/font/google';
+import { Bebas_Neue, Noto_Sans } from '@next/font/google';
 import Image from 'next/image';
 import React from 'react';
 import TracksBG from '../../public/assets/tracksbg.svg'
@@ -19,15 +19,15 @@ const bebas_neue = Bebas_Neue({
 let data = [
     { image: BlockChain, trackId: 'wmd', title: 'Web 3 and Metaverse', desc: 'Web3 refers to the third generation of the internet, which is being developed to provide a decentralized and more secure experience for users. The metaverse, on the other hand, refers to a virtual world that is fully immersive and interactive, allowing users to create and engage with digital environments and experiences.' },
     { image: CloudComputing, trackId: 'cnc', title: 'Cloud-Native Computing', desc: 'Cloud Native Computing is a term that refers to the design and deployment of applications and services in a cloud-native environment. A cloud-native environment is a platform that is optimized for the cloud and built from the ground up to take full advantage of the capabilities of cloud computing.' },
-    { image: AI, trackId: 'ai', title: 'Artificial Intelligence (AI) and Deep Learning', desc: 'Artificial Intelligence (AI) is a field of computer science that focuses on creating machines or computer programs that can perform tasks that typically require human intelligence, such as learning, reasoning, problem-solving, perception, natural language understanding, and decision-making. AI systems can be trained to recognize patterns in data, make predictions, or take actions based on the input they receive.' },
-    { image: IOT, trackId: 'iot', title: 'Ambient Computing and IoT', desc: 'Ambient Computing refers to the idea that technology should be seamlessly integrated into our environment, so that it is always present and available to us in a way that is natural and unobtrusive. The Internet of Things (IoT) refers to the network of physical devices, vehicles, buildings, and other items embedded with sensors, software, and connectivity that allows them to collect and exchange data.' },
+    { image: AI, trackId: 'ai', title: 'Artificial Intelligence (AI) and Deep Learning', desc: 'Artificial Intelligence (AI) is a field of the computer science that focuses on creating machines or computer programs that can perform tasks that typically require human intelligence, such as learning, reasoning, problem-solving, perception, natural lang understanding, and decision-making. AI systems can be trained to recognize the patterns in data, make predictions, or take actions based on the input they receive.' },
+    { image: IOT, trackId: 'iot', title: 'Ambient Computing and IoT', desc: 'Ambient Computing , refers to the idea that the technology should be seamlessly integrated into our environment, so that it is always present and available to us in a way that is natural and unobtrusive. The Internet of Things (IoT) refers to network of physical devices, vehicles, buildings, and other items embedded with the sensors, software, & connectivity that allows them to collect and exchange data.' },
     { image: Geonomics, trackId: 'gbs', title: 'Genomics and Bioinformatics', desc: 'Genomics is the study of the complete set of DNA within an organism, including its genes and other genetic material. This includes analyzing the structure, function, and evolution of genomes, as well as the interactions between genes and their environment.' },
-    { image: Network, trackId: 'npa', title: 'Network Programmability and Automation', desc: 'Network programmability and automation refer to the use of software and other tools to manage and control network devices and infrastructure, instead of relying on manual configuration and management processes' }
+    { image: Network, trackId: 'npa', title: 'Network Programmability and Automation', desc: 'Network programmability and automation refer to the use of software and the other tools to manage and control the network devices and infrastructure, instead of just relying on manual configuration and management processes' }
 ]
 
 function Tracks() {
     return (
-        <div className='w-full py-16 relative'>
+        <div className={`w-full py-16 relative`}>
             <Image src={TracksBG} alt='BG' className='absolute top-0 left-0 -z-10 w-[600px] md:w-full' />
             <div className='w-[1300px] xl:w-[90%] lg:w-[95%]  m-auto'>
                 <div>
